@@ -69,9 +69,9 @@ def scan(text,transition_table,accept_states):
 # the transition table, as a dictionary
 # states that have no outgoing edges need not be in td
 td = { 's0':{ 'ZERO':'s1','ONE':'s2', 'TWO':'s3','THREE':'s4','FOUR_OR_FIVE':'s4','SIX_TO_NINE':'s4'},
-       's1':{ 'ZERO':'s1','ONE':'s1', 'TWO':'s1','THREE':'s1','FOUR_OR_FIVE':'s1','SIX_TO_NINE':'s1','DELIMITER' : 's5'},
-       's2':{ 'ZERO':'s2','ONE':'s2', 'TWO':'s2','THREE':'s2','FOUR_OR_FIVE':'s2','SIX_TO_NINE':'s2','DELIMITER' : 's5' },
-       's3':{ 'ZERO':'s3','ONE':'s3', 'TWO':'s3','THREE':'s3', 'DELIMITER' : 's5'},
+       's1':{ 'ZERO':'s12','ONE':'s12', 'TWO':'s12','THREE':'s12','FOUR_OR_FIVE':'s12','SIX_TO_NINE':'s12','DELIMITER' : 's5'},
+       's2':{ 'ZERO':'s11','ONE':'s11', 'TWO':'s11','THREE':'s11','FOUR_OR_FIVE':'s11','SIX_TO_NINE':'s11','DELIMITER' : 's5' },
+       's3':{ 'ZERO':'s13','ONE':'s13', 'TWO':'s13','THREE':'s13','DELIMITER' : 's5'},
        's4':{ 'DELIMITER':'s5' },
        's5':{ 'ZERO':'s6','ONE':'s6', 'TWO':'s6','THREE':'s6','FOUR_OR_FIVE' : 's6'},
        's6':{ 'ZERO':'s7','ONE':'s7', 'TWO':'s7','THREE':'s7','FOUR_OR_FIVE':'s7','SIX_TO_NINE':'s7'},
@@ -79,6 +79,9 @@ td = { 's0':{ 'ZERO':'s1','ONE':'s2', 'TWO':'s3','THREE':'s4','FOUR_OR_FIVE':'s4
        's8':{ 'ZERO':'s9','ONE':'s9', 'TWO':'s9','THREE':'s9','FOUR_OR_FIVE' : 's9' },
        's9':{ 'ZERO':'s10','ONE':'s10', 'TWO':'s10','THREE':'s10','FOUR_OR_FIVE' : 's10','SIX_TO_NINE':'s10'},
        's10':{},
+       's11':{'DELIMITER' : 's5'},
+       's12':{'DELIMITER' : 's5'},
+       's13':{'DELIMITER' : 's5'}
      } 
 
 # the dictionary of accepting states and their
