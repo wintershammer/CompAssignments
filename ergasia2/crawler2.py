@@ -22,4 +22,4 @@ def analyse(url):
     
 for label,url in analyse('http://di.ionio.gr/~mistral/tp/compilers/lecturedoc/unit3/module1.html'):
     print(label,":",url)
-    #print(visit(url))
+    print(visit(url))
